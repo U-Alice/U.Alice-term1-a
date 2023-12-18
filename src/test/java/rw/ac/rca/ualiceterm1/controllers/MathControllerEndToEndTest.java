@@ -1,4 +1,4 @@
-package rw.ac.rca.UAliceTerm1a.controllers;
+package rw.ac.rca.ualiceterm1.controllers;
 
 public class MathControllerEndToEndTest {
 }

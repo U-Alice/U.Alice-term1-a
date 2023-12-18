@@ -1,4 +1,4 @@
-package rw.ac.rca.UAliceTerm1a.configs;
+package rw.ac.rca.ualiceterm1.configs;
 
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.config.annotation.EnableWebMvc;

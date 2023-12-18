@@ -19,7 +19,7 @@ public class MathController {
         this.mathService = mathService;
     }
 
-    @PostMapping
+    @PostMapping("/do-math")
    public ResponseEntity<ApiResponse>  doMath(@RequestBody DoMathRequest dto) throws InvalidOperationException {
         double calcResponse =  mathService.doMath(dto.getOperand1(), dto.getOperand2(), dto.getOperation());
         return ResponseEntity.ok(ApiResponse.success(calcResponse));
