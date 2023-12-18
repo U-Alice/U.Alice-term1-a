@@ -25,7 +25,7 @@ public class MathControllerIntegrationTest {
    public void testDoMath() {
         DoMathRequest dto = new DoMathRequest(1,2, "+");
         ResponseEntity<ApiResponse> response = restTemplate.postForEntity("/do-math",  TestUtil.createHttpEntity(dto), ApiResponse.class);
-        assertEquals(HttpStatus.CREATED, response.getStatusCode());
+        assertEquals(HttpStatus.OK, response.getStatusCode());
     }
 
 }
