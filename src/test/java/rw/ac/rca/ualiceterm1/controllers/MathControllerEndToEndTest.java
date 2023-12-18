@@ -1,6 +1,5 @@
 package rw.ac.rca.ualiceterm1.controllers;
 
-import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.junit.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
@@ -12,11 +11,8 @@ import org.springframework.test.context.junit.jupiter.SpringExtension;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.request.MockHttpServletRequestBuilder;
 import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
-import org.springframework.test.web.servlet.setup.MockMvcBuilders;
 import rw.ac.rca.ualiceterm1.dtos.DoMathRequest;
-import rw.ac.rca.ualiceterm1.exceptions.InvalidOperationException;
-import rw.ac.rca.ualiceterm1.payload.ApiResponse;
-import rw.ac.rca.ualiceterm1.services.MathService;
+import rw.ac.rca.ualiceterm1.services.MathOperator;
 
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
@@ -30,7 +26,7 @@ public class MathControllerEndToEndTest{
     private ObjectMapper objectMapper = new ObjectMapper();
 
     @MockBean
-    private MathService mathService;
+    private MathOperator mathService;
 
     @Test
     public void doMathTest() throws Exception {

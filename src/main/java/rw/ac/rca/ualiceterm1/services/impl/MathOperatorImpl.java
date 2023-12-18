@@ -2,11 +2,11 @@ package rw.ac.rca.ualiceterm1.services.impl;
 
 import org.springframework.stereotype.Service;
 import rw.ac.rca.ualiceterm1.exceptions.InvalidOperationException;
-import rw.ac.rca.ualiceterm1.services.MathService;
+import rw.ac.rca.ualiceterm1.services.MathOperator;
 
 
 @Service
-public class MathServiceImpl implements MathService {
+public class MathOperatorImpl implements MathOperator {
     @Override
     public double doMath(double operand1, double operand2, String
             operation) throws InvalidOperationException {

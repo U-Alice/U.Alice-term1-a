@@ -8,14 +8,14 @@ import org.springframework.web.bind.annotation.RestController;
 import rw.ac.rca.ualiceterm1.dtos.DoMathRequest;
 import rw.ac.rca.ualiceterm1.exceptions.InvalidOperationException;
 import rw.ac.rca.ualiceterm1.payload.ApiResponse;
-import rw.ac.rca.ualiceterm1.services.MathService;
+import rw.ac.rca.ualiceterm1.services.MathOperator;
 
 @RestController
 @RequestMapping()
 public class MathController {
-    private final MathService mathService;
+    private final MathOperator mathService;
 
-    public MathController(MathService mathService) {
+    public MathController(MathOperator mathService) {
         this.mathService = mathService;
     }
 
