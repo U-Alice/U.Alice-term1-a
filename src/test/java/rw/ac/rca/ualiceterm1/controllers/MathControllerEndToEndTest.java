@@ -35,13 +35,11 @@ public class MathControllerEndToEndTest{
     @Test
     public void doMathTest() throws Exception {
         DoMathRequest mathRequest = new DoMathRequest(1,2, "+");
-        ApiResponse mockedResponse = new ApiResponse(true, 3);
-        // Perform the request and verify the response
         MockHttpServletRequestBuilder request = MockMvcRequestBuilders
                 .post("/do-math")
                 .accept(MediaType.APPLICATION_JSON)
                 .content(objectMapper.writeValueAsString(mathRequest));
-        mockMvc.perform(request)
+        this.mockMvc.perform(request)
                 .andExpect(status().isOk());
     }
 
